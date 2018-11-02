@@ -2,7 +2,25 @@
  * Created by geordie on 11/2/18.
  */
 public class Practice_problems {
+  public void findInverse(int x, int y){
+       int c =1;
+       int d=1;
+       int a= y;
+       int b= x;
+       while( (b-a)!= 1){
+           a = y *c;
+           while(b<a){
+               d++;
+               b = x *d;
+               if(d>y){
+                   System.out.println("DNE");
+                   return;}
+           }
+           c++;
+       }
 
+       System.out.println(" inverse of " +x + " in "+ y+ " is "+ d );
+   }
     public void giveMePowerSet(int [] a){
 
         String sttr = "";
@@ -102,6 +120,8 @@ public class Practice_problems {
         String nums = "2612";
         System.out.println("num of ways = " + prac.num_of_ways(nums,0));
        System.out.println(prac.convertRoman(3));
+       prac.findInverse(11,14);
+      prac.findInverse(7,10);
 
     }
 
