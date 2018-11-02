@@ -21,14 +21,14 @@ public class Practice_problems {
 
        System.out.println(" inverse of " +x + " in "+ y+ " is "+ d );
    }
-    public void giveMePowerSet(int [] a){
+    public void giveMePowerSet(int [] a){// returns the power set of an array of unique integers//
 
         String sttr = "";
         int k =0;
          powerSet(sttr,a,k);
         System.out.print("{} \n");
     }
-    public String powerSet(String s, int[] a,int k){
+    public String powerSet(String s, int[] a,int k){//creates the power set//
         if(k==a.length) {
             return s;
         }
@@ -39,7 +39,8 @@ public class Practice_problems {
         return powerSet(sub+",",a,k+1);
 
     }
-    public int num_of_ways(String s,int count){
+    public int num_of_ways(String s,int count){// this is the number of ways a integer 
+      //can represent a string of letters 1=a,2=b,12=l so "12" can has "ab" or "l" so two ways it can be represented//
         if(s.equals(""))
             return 1;
         if(s.charAt(0)=='0')
