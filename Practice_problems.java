@@ -1,6 +1,7 @@
 /**
  * Created by geordie on 11/2/18.
  */
+ import java.util.Arrays;
 public class Practice_problems {
   public void findInverse(int x, int y){
        int c =1;
@@ -39,7 +40,7 @@ public class Practice_problems {
         return powerSet(sub+",",a,k+1);
 
     }
-    public int num_of_ways(String s,int count){// this is the number of ways a integer 
+    public int num_of_ways(String s,int count){// this is the number of ways a integer
       //can represent a string of letters 1=a,2=b,12=l so "12" can has "ab" or "l" so two ways it can be represented//
         if(s.equals(""))
             return 1;
@@ -113,6 +114,25 @@ public class Practice_problems {
 
         return ans;
     }
+    /*Given an array of integers, return a new array
+      such that each element at index i of the new array is the
+       product of all the numbers in the original array except the one at i.
+       */
+      public int[] sumArray(int[] nums){
+          int[] numsCopy=nums.clone(); // this is done so that numsCopy points to a
+          // different array that is a copy, so changes arent made to both arrays.
+          for(int i = 0; i<nums.length;i++){
+              nums[i]=0;
+              for(int j =0; j<nums.length;j++){
+                  if(i!=j)
+                  nums[i]+=numsCopy[j];
+
+              }
+
+          }
+
+          return nums;
+      }
 
     public static void main(String[] args ){
         Practice_problems prac = new Practice_problems();
@@ -123,7 +143,7 @@ public class Practice_problems {
        System.out.println(prac.convertRoman(3));
        prac.findInverse(11,14);
       prac.findInverse(7,10);
-
+      System.out.print(Arrays.toString(prac.sumArray(a)));
     }
 
 }
