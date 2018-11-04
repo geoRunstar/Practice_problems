@@ -122,10 +122,10 @@ public class Practice_problems {
           int[] numsCopy=nums.clone(); // this is done so that numsCopy points to a
           // different array that is a copy, so changes arent made to both arrays.
           for(int i = 0; i<nums.length;i++){
-              nums[i]=0;
+              nums[i]=1;
               for(int j =0; j<nums.length;j++){
                   if(i!=j)
-                  nums[i]+=numsCopy[j];
+                  nums[i]*=numsCopy[j];
 
               }
 
