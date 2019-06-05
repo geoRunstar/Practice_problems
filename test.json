@@ -1,0 +1,7 @@
+dataHandler({
+"links" :[
+  {"google" : "http://google.com"},
+  {"echristus" : "https://onechristus.echristus.net/"}
+]
+
+  });
